@@ -3,6 +3,7 @@ namespace Play.Catalog.Service.Controllers
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using Common.MongoDB.Settings;
     using Core.Application.Requests;
     using Core.Application.Requests.Extensions;
     using Core.Application.Responses;
@@ -10,7 +11,6 @@ namespace Play.Catalog.Service.Controllers
     using Core.Application.UseCases.CreateItem;
     using Core.Application.UseCases.UpdateItem;
     using Core.Domain.AggregateModels.ItemModel;
-    using Core.Infra.Repositories;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cfNX82DbddJU4uyHLC3tQuqqZadNC3GZzfoCg2qLTk69ao4OUR4jIE4265uklkKPzBbAjSROJhXYpZi3amzKKA==",
+  "dgSpecHash": "0bdV70MEz6NHvy5TNSQNcu5fo97c6S+EKIJFF0PLGjom9CVqSJdqGo7d2ACHXrGcjqAPQ07ID7SH7TH62FqqGg==",
   "success": true,
   "projectFilePath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "/Users/diego.silva/.nuget/packages/mongodb.driver/2.14.1/mongodb.driver.2.14.1.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/mongodb.driver.core/2.14.1/mongodb.driver.core.2.14.1.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/mongodb.libmongocrypt/1.3.0/mongodb.libmongocrypt.1.3.0.nupkg.sha512",
+    "/Users/diego.silva/.nuget/packages/play.common/1.0.0/play.common.1.0.0.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",

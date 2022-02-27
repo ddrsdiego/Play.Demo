@@ -1,11 +1,13 @@
-namespace Play.Catalog.Service.Core.Infra.Repositories
+namespace Play.Common.MongoDB
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Linq.Expressions;
     using System.Threading.Tasks;
-    using Domain.SeedWorkds;
-    using MongoDB.Driver;
+    using global::MongoDB.Driver;
+    using SeedWorks;
+    using Settings;
 
     public sealed class MongoRepository<T> : IMongoRepository<T>
         where T : IEntity
@@ -24,6 +26,11 @@ namespace Play.Catalog.Service.Core.Infra.Repositories
         {
             var items = await _collection.Find(_filterDefinitionBuilder.Empty).ToListAsync();
             return items;
+        }
+
+        public async Task<IReadOnlyCollection<T>> Get(Expression<Func<T, bool>> filter)
+        {
+            return await _collection.Find(filter).ToListAsync();
         }
 
         public async Task<T> GetById(string id)

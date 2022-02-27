@@ -1,5 +1,6 @@
 namespace Play.Catalog.Service.Core.Infra.Extensions
 {
+    using Common.MongoDB;
     using Domain.AggregateModels.ItemModel;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;

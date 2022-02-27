@@ -1,4 +1,4 @@
-namespace Play.Catalog.Service.Core.Domain.SeedWorkds
+namespace Play.Common.SeedWorks
 {
     public interface IEntity
     {

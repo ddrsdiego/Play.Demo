@@ -20,6 +20,7 @@
           "net6.0"
         ],
         "sources": {
+          "/Users/diego.silva/src/projects/packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,9 +43,9 @@
               "target": "Package",
               "version": "[10.3.6, )"
             },
-            "MongoDB.Driver": {
+            "Play.Common": {
               "target": "Package",
-              "version": "[2.14.1, )"
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -85,6 +86,7 @@
           "net6.0"
         ],
         "sources": {
+          "/Users/diego.silva/src/projects/packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

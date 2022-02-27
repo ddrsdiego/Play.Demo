@@ -1,7 +1,7 @@
 namespace Play.Catalog.Service.Core.Domain.AggregateModels.ItemModel
 {
     using System;
-    using SeedWorkds;
+    using Common.SeedWorks;
 
     public class Item : IEntity
     {

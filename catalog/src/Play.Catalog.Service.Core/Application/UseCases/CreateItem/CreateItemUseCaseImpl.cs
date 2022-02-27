@@ -2,8 +2,8 @@ namespace Play.Catalog.Service.Core.Application.UseCases.CreateItem
 {
     using System;
     using System.Threading.Tasks;
+    using Common.MongoDB.Settings;
     using Domain.AggregateModels.ItemModel;
-    using Infra.Repositories;
 
     public class CreateItemUseCaseImpl : IUseCaseDefinition<CreateItemUseCaseReq, CreateItemUseCaseRsp>
     {
