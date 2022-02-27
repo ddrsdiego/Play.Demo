@@ -1,0 +1,12 @@
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/Play.Catalog.Service.Core.csproj.AssemblyReference.cache
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/Play.Catalog.Service.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/Play.Catalog.Service.Core.AssemblyInfoInputs.cache
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/Play.Catalog.Service.Core.AssemblyInfo.cs
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/Play.Catalog.Service.Core.csproj.CoreCompileInputs.cache
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/bin/Debug/net6.0/Play.Catalog.Service.Core.deps.json
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/bin/Debug/net6.0/Play.Catalog.Service.Core.dll
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/bin/Debug/net6.0/ref/Play.Catalog.Service.Core.dll
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/bin/Debug/net6.0/Play.Catalog.Service.Core.pdb
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/Play.Catalog.Service.Core.dll
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/ref/Play.Catalog.Service.Core.dll
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/Debug/net6.0/Play.Catalog.Service.Core.pdb
