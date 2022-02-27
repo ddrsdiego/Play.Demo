@@ -10,9 +10,9 @@ namespace Play.Catalog.Service.Core.Application.IoC.Extensions
         public static IServiceCollection AddCatalogServices(this IServiceCollection services,
             IConfiguration configuration)
         {
+            services.AddUseCases();
             services.AddOptions(configuration);
             services.AddRepositories(configuration);
-
             return services;
         }
     }

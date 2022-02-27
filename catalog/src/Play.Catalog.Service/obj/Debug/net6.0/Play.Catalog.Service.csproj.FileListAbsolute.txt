@@ -43,3 +43,4 @@
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/ref/Play.Catalog.Service.dll
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/Play.Catalog.Service.pdb
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/Play.Catalog.Service.genruntimeconfig.cache
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/FluentValidation.dll

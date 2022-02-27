@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iGmvZvSGWFn/QHPOPjQumt3nb+sPKpJ0mRr8BQPQjW+Q9lzEWCTMpvCxrW4DGS30+NMx1gwdgfVGhNtKmz5wHQ==",
+  "dgSpecHash": "cfNX82DbddJU4uyHLC3tQuqqZadNC3GZzfoCg2qLTk69ao4OUR4jIE4265uklkKPzBbAjSROJhXYpZi3amzKKA==",
   "success": true,
   "projectFilePath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
   "expectedPackageFiles": [
     "/Users/diego.silva/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
+    "/Users/diego.silva/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/mongodb.bson/2.14.1/mongodb.bson.2.14.1.nupkg.sha512",
