@@ -10,7 +10,6 @@
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Domain\Extensions" />
-      <Folder Include="Infra\Repositories" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="FluentValidation" Version="10.3.6" />

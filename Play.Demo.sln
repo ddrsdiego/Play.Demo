@@ -18,6 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{962E5695
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play.Common", "common\src\Play.Common\Play.Common.csproj", "{610E61A7-3B49-4E89-AB40-8650D5673228}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "container", "container", "{635E151A-DC5A-4952-8F27-C974631DBD11}"
+ProjectSection(SolutionItems) = preProject
+	container\docker-compose.yml = container\docker-compose.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
