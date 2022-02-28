@@ -2,6 +2,7 @@ namespace Play.Inventory.Core.Application.IoC
 {
     using Common.MongoDB;
     using Domain.AggregateModels.InventoryItemModel;
+    using Infra.Clients;
     using Infra.Options;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +17,8 @@ namespace Play.Inventory.Core.Application.IoC
             services
                 .AddMongo(appSettings.AppName)
                 .AddMongoRepository<InventoryItem>("inventory-items");
+
+            services.AddClients(configuration);
             return services;
         }
     }

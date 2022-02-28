@@ -4,14 +4,15 @@ namespace Play.Inventory.Core.Application.Responses
 
     public static class Extension
     {
-        public static InventoryItemResponse AsResponse(this InventoryItem inventoryItem)
+        public static InventoryItemResponse AsResponse(this InventoryItem inventoryItem, string name,
+            string description)
         {
             return new InventoryItemResponse(
-                inventoryItem.Id,
                 inventoryItem.UserId,
                 inventoryItem.CatalogItemId,
-                inventoryItem.Quantity,
-                inventoryItem.AcquiredAt
+                name,
+                description,
+                inventoryItem.Quantity
             );
         }
     }

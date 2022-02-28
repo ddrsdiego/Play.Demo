@@ -1,7 +1,7 @@
 namespace Play.Catalog.Core.Application.IoC.Extensions
 {
     using Infra.Extensions;
-    using Infra.Options.Extensions;
+    using Infra.Options;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 

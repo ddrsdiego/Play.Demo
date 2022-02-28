@@ -8,23 +8,33 @@ namespace Play.Inventory.Service.Controllers
     using Core.Application.Requests;
     using Core.Application.Responses;
     using Core.Domain.AggregateModels.InventoryItemModel;
+    using Core.Infra.Clients;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
     [Route("items")]
     public class ItemsController : ControllerBase
     {
+        private readonly CatalogClient _catalogClient;
         private readonly IMongoRepository<InventoryItem> _repository;
 
-        public ItemsController(IMongoRepository<InventoryItem> repository)
+        public ItemsController(IMongoRepository<InventoryItem> repository, CatalogClient catalogClient)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+            _catalogClient = catalogClient ?? throw new ArgumentNullException(nameof(catalogClient));
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InventoryItemResponse>>> GetAll()
         {
-            var items = (await _repository.GetAll()).Select(x => x.AsResponse());
+            var catalogItems = await _catalogClient.GetCatalogItems();
+            var inventoryItem = await _repository.GetAll();
+
+            var items = inventoryItem.Select(inventoryItem =>
+            {
+                var (_, name, description) = catalogItems.Single(x => x.Id == inventoryItem.CatalogItemId);
+                return inventoryItem.AsResponse(name, description);
+            });
             return Ok(items);
         }
 
@@ -35,9 +45,15 @@ namespace Play.Inventory.Service.Controllers
             if (string.IsNullOrWhiteSpace(userId))
                 return BadRequest();
 
-            var items = (await _repository.GetAll(
-                    x => x.UserId == userId))
-                .Select(x => x.AsResponse());
+            var catalogItems = await _catalogClient.GetCatalogItems();
+            var inventoryItems = await _repository.GetAll(x => x.UserId == userId);
+
+            var items = inventoryItems
+                .Select(inventoryItem =>
+                {
+                    var (_, name, description) = catalogItems.Single(x => x.Id == inventoryItem.CatalogItemId);
+                    return inventoryItem.AsResponse(name, description);
+                });
 
             return Ok(items);
         }

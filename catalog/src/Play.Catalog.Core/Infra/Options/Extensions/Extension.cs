@@ -1,10 +1,10 @@
-namespace Play.Catalog.Core.Infra.Options.Extensions
+namespace Play.Catalog.Core.Infra.Options
 {
     using Common.MongoDB.Settings;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 
-    internal static class OptionsContainer
+    internal static class Extension
     {
         public static IServiceCollection AddOptions(this IServiceCollection services, IConfiguration configuration)
         {
