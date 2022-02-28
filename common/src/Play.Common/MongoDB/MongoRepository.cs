@@ -28,19 +28,24 @@ namespace Play.Common.MongoDB
             return items;
         }
 
-        public async Task<IReadOnlyCollection<T>> Get(Expression<Func<T, bool>> filter)
-        {
-            return await _collection.Find(filter).ToListAsync();
-        }
-
-        public async Task<T> GetById(string id)
+        public Task<T> Get(Expression<Func<T, bool>> filter)
         {
             try
             {
-                var filter = _filterDefinitionBuilder.Eq(entity => entity.Id, id);
-
-                var item = await _collection.Find(filter).FirstOrDefaultAsync();
-                return item ?? default;
+                return _collection.Find(filter).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
+        public async Task<IReadOnlyCollection<T>> GetAll()
+        {
+            try
+            {
+                return await _collection.Find(_filterDefinitionBuilder.Empty).ToListAsync();
             }
             catch (Exception e)
             {
@@ -49,6 +54,20 @@ namespace Play.Common.MongoDB
             }
         }
 
+        public async Task<IReadOnlyCollection<T>> GetAll(Expression<Func<T, bool>> filter)
+        {
+            try
+            {
+                var items = await _collection.Find(filter).ToListAsync();
+                return items;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
         public async Task Create(T newItem)
         {
             if (newItem == null) throw new ArgumentNullException(nameof(newItem));

@@ -4,28 +4,28 @@
     "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj": {}
   },
   "projects": {
-    "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj": {
+    "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
-        "projectName": "Play.Catalog.Service.Core",
-        "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
+        "projectUniqueName": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj",
+        "projectName": "Play.Catalog.Core",
+        "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj",
         "packagesPath": "/Users/diego.silva/.nuget/packages/",
-        "outputPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/obj/",
+        "outputPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/diego.silva/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "/Users/diego.silva/src/projects/packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -36,8 +36,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
@@ -45,7 +45,7 @@
             },
             "Play.Common": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[1.0.2, )"
             }
           },
           "imports": [
@@ -93,8 +93,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj": {
-                "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj"
+              "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
+                "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
               }
             }
           }
@@ -109,6 +109,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Play.Common": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

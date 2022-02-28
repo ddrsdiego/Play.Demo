@@ -8,11 +8,13 @@ namespace Play.Common.MongoDB.Settings
 
     public interface IMongoRepository<T> where T : IEntity
     {
+        Task<IReadOnlyCollection<T>> GetAll();
+
+        Task<IReadOnlyCollection<T>> GetAll(Expression<Func<T, bool>> filter);
+
         Task<IReadOnlyCollection<T>> Get();
-
-        Task<IReadOnlyCollection<T>> Get(Expression<Func<T, bool>> filter);
-
-        Task<T> GetById(string id);
+        
+        Task<T> Get(Expression<Func<T, bool>> filter);
 
         Task Create(T newEntity);
 

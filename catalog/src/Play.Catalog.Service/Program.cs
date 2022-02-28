@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Play.Catalog.Service.Core.Application.IoC.Extensions;
+using Play.Catalog.Core.Application.IoC.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

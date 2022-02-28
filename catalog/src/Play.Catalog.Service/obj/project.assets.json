@@ -155,7 +155,7 @@
           }
         }
       },
-      "Play.Common/1.0.0": {
+      "Play.Common/1.0.2": {
         "type": "package",
         "dependencies": {
           "MongoDB.Driver": "2.14.1"
@@ -248,18 +248,18 @@
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "Play.Catalog.Service.Core/1.0.0": {
+      "Play.Catalog.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "Play.Common": "1.0.0"
+          "Play.Common": "1.0.2"
         },
         "compile": {
-          "bin/placeholder/Play.Catalog.Service.Core.dll": {}
+          "bin/placeholder/Play.Catalog.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Play.Catalog.Service.Core.dll": {}
+          "bin/placeholder/Play.Catalog.Core.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -480,14 +480,14 @@
         "runtimes/win/native/mongocrypt.dll"
       ]
     },
-    "Play.Common/1.0.0": {
-      "sha512": "5Rsm6VIBpeaspd3odvTI/+Vya/UpBAwD7vO6BLQ48O+1NKGtKysGXIzkJA17xtmxfWNO0H9SvtzsLcgrcdpL2Q==",
+    "Play.Common/1.0.2": {
+      "sha512": "XcIWqSfEMerxUYcJpvZF9FVOuEMN2vGWJOFakdwX77nZYo2mFqHBOcfoRwO5eh6SMvVKzKnYRdPEmuJE4oWFAg==",
       "type": "package",
-      "path": "play.common/1.0.0",
+      "path": "play.common/1.0.2",
       "files": [
         ".nupkg.metadata",
         "lib/net5.0/Play.Common.dll",
-        "play.common.1.0.0.nupkg.sha512",
+        "play.common.1.0.2.nupkg.sha512",
         "play.common.nuspec"
       ]
     },
@@ -651,15 +651,16 @@
         "version.txt"
       ]
     },
-    "Play.Catalog.Service.Core/1.0.0": {
+    "Play.Catalog.Core/1.0.0": {
       "type": "project",
-      "path": "../Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
-      "msbuildProject": "../Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj"
+      "path": "../Play.Catalog.Core/Play.Catalog.Core.csproj",
+      "msbuildProject": "../Play.Catalog.Core/Play.Catalog.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Play.Catalog.Service.Core >= 1.0.0",
+      "Play.Catalog.Core >= 1.0.0",
+      "Play.Common >= 1.0.2",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -689,8 +690,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj": {
-              "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj"
+            "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
+              "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
             }
           }
         }
@@ -705,6 +706,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Play.Common": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"

@@ -3,14 +3,14 @@ namespace Play.Catalog.Service.Controllers
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using Catalog.Core.Application.Requests;
+    using Catalog.Core.Application.Requests.Extensions;
+    using Catalog.Core.Application.Responses;
+    using Catalog.Core.Application.Responses.Extensions;
+    using Catalog.Core.Application.UseCases.CreateItem;
+    using Catalog.Core.Application.UseCases.UpdateItem;
+    using Catalog.Core.Domain.AggregateModels.ItemModel;
     using Common.MongoDB.Settings;
-    using Core.Application.Requests;
-    using Core.Application.Requests.Extensions;
-    using Core.Application.Responses;
-    using Core.Application.Responses.Extensions;
-    using Core.Application.UseCases.CreateItem;
-    using Core.Application.UseCases.UpdateItem;
-    using Core.Domain.AggregateModels.ItemModel;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
@@ -33,7 +33,7 @@ namespace Play.Catalog.Service.Controllers
         [HttpGet]
         public async Task<ActionResult<ItemResponse>> Get()
         {
-            var responses = (await _itemRepository.Get()).Select(x => x.AsResponse());
+            var responses = (await _itemRepository.GetAll()).Select(x => x.AsResponse());
             return Ok(responses);
         }
 
@@ -43,7 +43,9 @@ namespace Play.Catalog.Service.Controllers
         {
             if (id == null) throw new ArgumentNullException(nameof(id));
 
-            var item = await _itemRepository.GetById(id);
+            var item = await _itemRepository.Get(x => x.Id == id);
+            if (item is null)
+                return NotFound();
 
             return Ok(item.AsResponse());
         }

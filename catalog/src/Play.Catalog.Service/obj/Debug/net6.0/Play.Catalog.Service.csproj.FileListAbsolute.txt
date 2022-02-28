@@ -26,8 +26,6 @@
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/runtimes/linux/native/libmongocrypt.so
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/runtimes/osx/native/libmongocrypt.dylib
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll
-/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Play.Catalog.Service.Core.dll
-/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Play.Catalog.Service.Core.pdb
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/Play.Catalog.Service.csproj.AssemblyReference.cache
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/Play.Catalog.Service.GeneratedMSBuildEditorConfig.editorconfig
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/Play.Catalog.Service.AssemblyInfoInputs.cache
@@ -45,3 +43,5 @@
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/Play.Catalog.Service.genruntimeconfig.cache
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/FluentValidation.dll
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Play.Common.dll
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Play.Catalog.Core.dll
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Play.Catalog.Core.pdb

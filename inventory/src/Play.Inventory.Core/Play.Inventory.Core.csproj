@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Application\IoC\Extensions" />
+      <Folder Include="Application\Requests\Extensions" />
+      <Folder Include="Application\UseCases" />
+      <Folder Include="Infra\Repositories" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="10.3.6" />
+      <PackageReference Include="Play.Common" Version="1.0.2" />
+    </ItemGroup>
+
+</Project>
