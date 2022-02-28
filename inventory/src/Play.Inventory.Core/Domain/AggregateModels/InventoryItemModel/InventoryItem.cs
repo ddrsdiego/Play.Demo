@@ -8,8 +8,9 @@ namespace Play.Inventory.Core.Domain.AggregateModels.InventoryItemModel
         public InventoryItem()
         {
             Id = Guid.NewGuid().ToString();
+            AcquiredAt = DateTimeOffset.Now;
         }
-        
+
         public string Id { get; }
 
         public string UserId { get; set; }

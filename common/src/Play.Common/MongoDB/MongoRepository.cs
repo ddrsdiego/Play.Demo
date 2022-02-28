@@ -5,7 +5,9 @@ namespace Play.Common.MongoDB
     using System.Linq;
     using System.Linq.Expressions;
     using System.Threading.Tasks;
+    using Async;
     using global::MongoDB.Driver;
+    using Microsoft.Extensions.Logging;
     using SeedWorks;
     using Settings;
 
@@ -13,34 +15,51 @@ namespace Play.Common.MongoDB
         where T : IEntity
     {
         private readonly IMongoCollection<T> _collection;
+        private readonly ILogger<MongoRepository<T>> _logger;
         private readonly FilterDefinitionBuilder<T> _filterDefinitionBuilder = Builders<T>.Filter;
 
-        public MongoRepository(IMongoDatabase mongoDatabase, string collectionName)
+        public MongoRepository(ILogger<MongoRepository<T>> logger, IMongoDatabase mongoDatabase, string collectionName)
         {
             if (mongoDatabase == null) throw new ArgumentNullException(nameof(mongoDatabase));
+            _logger = logger;
 
             _collection = mongoDatabase.GetCollection<T>(collectionName);
         }
 
-        public async Task<IReadOnlyCollection<T>> Get()
-        {
-            var items = await _collection.Find(_filterDefinitionBuilder.Empty).ToListAsync();
-            return items;
-        }
-
-        public Task<T> Get(Expression<Func<T, bool>> filter)
+        public ValueTask<List<T>> Get()
         {
             try
             {
-                return _collection.Find(filter).FirstOrDefaultAsync();
+                var result = _collection
+                    .Find(_filterDefinitionBuilder.Empty)
+                    .ToListAsync()
+                    .FastResult();
+
+                return result;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                _logger.LogError(e, "");
                 throw;
             }
         }
-        
+
+        public ValueTask<T> Get(Expression<Func<T, bool>> filter)
+        {
+            try
+            {
+                return _collection
+                    .Find(filter)
+                    .FirstOrDefaultAsync()
+                    .FastResult();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "");
+                throw;
+            }
+        }
+
         public async Task<IReadOnlyCollection<T>> GetAll()
         {
             try
@@ -67,7 +86,7 @@ namespace Play.Common.MongoDB
                 throw;
             }
         }
-        
+
         public async Task Create(T newItem)
         {
             if (newItem == null) throw new ArgumentNullException(nameof(newItem));
@@ -120,7 +139,7 @@ namespace Play.Common.MongoDB
 
             try
             {
-                await _collection.ReplaceOneAsync(filter, item);
+                var replaceResult = await _collection.ReplaceOneAsync(filter, item);
             }
             catch (Exception e)
             {

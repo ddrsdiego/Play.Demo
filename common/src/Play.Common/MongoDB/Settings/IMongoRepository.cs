@@ -12,9 +12,9 @@ namespace Play.Common.MongoDB.Settings
 
         Task<IReadOnlyCollection<T>> GetAll(Expression<Func<T, bool>> filter);
 
-        Task<IReadOnlyCollection<T>> Get();
+        ValueTask<List<T>> Get();
         
-        Task<T> Get(Expression<Func<T, bool>> filter);
+        ValueTask<T> Get(Expression<Func<T, bool>> filter);
 
         Task Create(T newEntity);
 

@@ -8,6 +8,7 @@ namespace Play.Common.MongoDB
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.DependencyInjection.Extensions;
+    using Microsoft.Extensions.Logging;
     using SeedWorks;
     using Settings;
 
@@ -38,7 +39,9 @@ namespace Play.Common.MongoDB
             services.TryAddSingleton<IMongoRepository<T>>(sp =>
             {
                 var dataBase = sp.GetRequiredService<IMongoDatabase>();
-                return new MongoRepository<T>(dataBase, collectionName);
+                var logger = sp.GetRequiredService<ILogger<MongoRepository<T>>>();
+
+                return new MongoRepository<T>(logger, dataBase, collectionName);
             });
 
             return services;

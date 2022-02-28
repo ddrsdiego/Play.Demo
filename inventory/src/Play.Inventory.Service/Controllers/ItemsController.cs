@@ -45,15 +45,15 @@ namespace Play.Inventory.Service.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] GrantItemRequest request)
         {
-            var inventoryItem = await TryGetInventoryItem();
+            var inventoryItem = await _repository
+                .Get(item => item.CatalogItemId == request.CatalogItemId && item.UserId == request.UserId);
 
             if (inventoryItem is null)
             {
                 inventoryItem = new InventoryItem
                 {
-                    CatalogItemId = request.CatalogItemId,
                     UserId = request.UserId,
-                    AcquiredAt = DateTimeOffset.Now,
+                    CatalogItemId = request.CatalogItemId,
                     Quantity = request.Quantity
                 };
 
@@ -66,14 +66,6 @@ namespace Play.Inventory.Service.Controllers
             }
 
             return Ok();
-
-            async Task<InventoryItem?> TryGetInventoryItem()
-            {
-                var inventoryItem = await _repository.Get(item =>
-                    item.CatalogItemId == request.CatalogItemId
-                    && item.UserId == request.UserId);
-                return inventoryItem;
-            }
         }
     }
 }
