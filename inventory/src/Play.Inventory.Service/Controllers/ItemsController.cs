@@ -15,10 +15,10 @@ namespace Play.Inventory.Service.Controllers
     [Route("items")]
     public class ItemsController : ControllerBase
     {
-        private readonly CatalogClient _catalogClient;
+        private readonly ICatalogClient _catalogClient;
         private readonly IMongoRepository<InventoryItem> _repository;
 
-        public ItemsController(IMongoRepository<InventoryItem> repository, CatalogClient catalogClient)
+        public ItemsController(IMongoRepository<InventoryItem> repository, ICatalogClient catalogClient)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _catalogClient = catalogClient ?? throw new ArgumentNullException(nameof(catalogClient));

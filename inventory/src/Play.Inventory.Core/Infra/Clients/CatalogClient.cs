@@ -6,26 +6,28 @@ namespace Play.Inventory.Core.Infra.Clients
     using System.Net.Http.Json;
     using System.Threading.Tasks;
     using Application.Responses;
-    using Common.Async;
+    using Common.Http;
 
-    public sealed class CatalogClient
+    public interface ICatalogClient
     {
-        private readonly HttpClient _httpClient;
+        Task<IReadOnlyCollection<CatalogItemResponse>> GetCatalogItems();
+    }
 
-        public const string ServiceName = nameof(CatalogClient);
-        
-        public CatalogClient(HttpClient httpClient)
+    public sealed class CatalogClient : CommonClient, ICatalogClient
+    {
+        public CatalogClient(IHttpClientFactory clientFactory)
+            : base(clientFactory, nameof(CatalogClient))
         {
-            _httpClient = httpClient;
         }
 
-        public ValueTask<IReadOnlyCollection<CatalogItemResponse>> GetCatalogItems()
+        public async Task<IReadOnlyCollection<CatalogItemResponse>> GetCatalogItems()
         {
             try
             {
-                var items = _httpClient
-                    .GetFromJsonAsync<IReadOnlyCollection<CatalogItemResponse>>("items")
-                    .FastResult();
+                var httpClient = _clientFactory.CreateClient(ServiceName);
+
+                var items = await httpClient
+                    .GetFromJsonAsync<IReadOnlyCollection<CatalogItemResponse>>("items");
 
                 return items;
             }

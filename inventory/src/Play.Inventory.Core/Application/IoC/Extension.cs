@@ -17,8 +17,8 @@ namespace Play.Inventory.Core.Application.IoC
             services
                 .AddMongo(appSettings.AppName)
                 .AddMongoRepository<InventoryItem>("inventory-items");
-
             services.AddClients(configuration);
+
             return services;
         }
     }

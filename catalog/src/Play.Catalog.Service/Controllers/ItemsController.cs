@@ -1,6 +1,7 @@
 namespace Play.Catalog.Service.Controllers
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Catalog.Core.Application.Requests;
@@ -12,6 +13,7 @@ namespace Play.Catalog.Service.Controllers
     using Catalog.Core.Domain.AggregateModels.ItemModel;
     using Common.MongoDB.Settings;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.OpenApi.Any;
 
     [ApiController]
     [Route("items")]
@@ -20,6 +22,8 @@ namespace Play.Catalog.Service.Controllers
         private readonly IMongoRepository<Item> _itemRepository;
         private readonly IUseCaseDefinition<CreateItemUseCaseReq, CreateItemUseCaseRsp> _createItemUseCase;
         private readonly IUseCaseDefinition<UpdateItemUseCaseReq, UpdateItemUseCaseRsp> _updateItemUseCase;
+
+        private static int requestCounter = 0;
 
         public ItemsController(IMongoRepository<Item> itemRepository,
             IUseCaseDefinition<CreateItemUseCaseReq, CreateItemUseCaseRsp> createItemUseCase,
@@ -31,9 +35,26 @@ namespace Play.Catalog.Service.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<ItemResponse>> Get()
+        public async Task<ActionResult<IEnumerable<ItemResponse>>> Get()
         {
+            requestCounter++;
+            Console.WriteLine($"Request {requestCounter}: Starting...");
+
+            if (requestCounter % 4 == 0)
+            {
+                Console.WriteLine($"Request {requestCounter}: Delaying...");
+                await Task.Delay(TimeSpan.FromSeconds(5));
+            }
+
+            if (requestCounter % 5 == 0)
+            {
+                Console.WriteLine($"Request {requestCounter}: 500 (Internal Server Error).");
+                return StatusCode(500);
+            }
+
             var responses = (await _itemRepository.GetAll()).Select(x => x.AsResponse());
+
+            Console.WriteLine($"Request {requestCounter}: 200 (OK).");
             return Ok(responses);
         }
 
