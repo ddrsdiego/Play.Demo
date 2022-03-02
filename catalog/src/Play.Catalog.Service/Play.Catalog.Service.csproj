@@ -7,13 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Play.Common" Version="1.0.3" />
+        <PackageReference Include="Play.Common" Version="1.0.5" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Play.Catalog.Core\Play.Catalog.Core.csproj" />
-      <ProjectReference Include="..\Play.Catalog.Service.Core\Play.Catalog.Service.Core.csproj" />
     </ItemGroup>
 
 </Project>

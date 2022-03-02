@@ -1,35 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "dhMRb+1qMwoN3F92LHb+SqlY6H/gAtgM5X5JgHL/QecSu/lcF7pEiMyPVFpwZumlDSTfYouhp5VQAGGrMeO0AQ==",
-  "success": false,
-  "projectFilePath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+  "dgSpecHash": "AMTgQX8IhUzCo3mcTbs6t8BUvmCNLcyjxofaHAfiKQoKOuECrGIhHJaOoIWA48RhpgIMf8cYgfdM7p0rRbzqNg==",
+  "success": true,
+  "projectFilePath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
   "expectedPackageFiles": [
-    "/Users/diego.silva/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/mongodb.bson/2.14.1/mongodb.bson.2.14.1.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/mongodb.driver/2.14.1/mongodb.driver.2.14.1.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/mongodb.driver.core/2.14.1/mongodb.driver.core.2.14.1.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/mongodb.libmongocrypt/1.3.0/mongodb.libmongocrypt.1.3.0.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/play.common/1.0.3/play.common.1.0.3.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
-    "/Users/diego.silva/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    "/home/ddrsdiego/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/mongodb.bson/2.14.1/mongodb.bson.2.14.1.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/mongodb.driver/2.14.1/mongodb.driver.2.14.1.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/mongodb.driver.core/2.14.1/mongodb.driver.core.2.14.1.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/mongodb.libmongocrypt/1.3.0/mongodb.libmongocrypt.1.3.0.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/play.common/1.0.5/play.common.1.0.5.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/home/ddrsdiego/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project '/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

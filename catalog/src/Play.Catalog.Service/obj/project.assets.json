@@ -155,7 +155,7 @@
           }
         }
       },
-      "Play.Common/1.0.3": {
+      "Play.Common/1.0.5": {
         "type": "package",
         "dependencies": {
           "MongoDB.Driver": "2.14.1"
@@ -253,7 +253,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "Play.Common": "1.0.3"
+          "Play.Common": "1.0.5"
         },
         "compile": {
           "bin/placeholder/Play.Catalog.Core.dll": {}
@@ -480,14 +480,14 @@
         "runtimes/win/native/mongocrypt.dll"
       ]
     },
-    "Play.Common/1.0.3": {
-      "sha512": "DErFJ+QXeCgoMEfQC8j6AO/RhPvtA5fyhvbecP8E0X0JbD4zbMJOpnBRzHiAKMNA+YecT2J0jvuCGaveTphkCA==",
+    "Play.Common/1.0.5": {
+      "sha512": "AzX/jy3F78lMUfihydIkNkapL9B90L8c8n2HFQTd2oUCOPOlfv4o8MlshBHxJThY8GP1ESaDGHjITdZ3svqfCw==",
       "type": "package",
-      "path": "play.common/1.0.3",
+      "path": "play.common/1.0.5",
       "files": [
         ".nupkg.metadata",
         "lib/net5.0/Play.Common.dll",
-        "play.common.1.0.3.nupkg.sha512",
+        "play.common.1.0.5.nupkg.sha512",
         "play.common.nuspec"
       ]
     },
@@ -659,43 +659,39 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
       "Play.Catalog.Core >= 1.0.0",
-      "Play.Common >= 1.0.3",
+      "Play.Common >= 1.0.5",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
   "packageFolders": {
-    "/Users/diego.silva/.nuget/packages/": {}
+    "/home/ddrsdiego/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+      "projectUniqueName": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
       "projectName": "Play.Catalog.Service",
-      "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
-      "packagesPath": "/Users/diego.silva/.nuget/packages/",
-      "outputPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/",
+      "projectPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+      "packagesPath": "/home/ddrsdiego/.nuget/packages/",
+      "outputPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/diego.silva/.nuget/NuGet/NuGet.Config"
+        "/home/ddrsdiego/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/Users/diego.silva/src/projects/packages": {},
+        "/mnt/c/_dev/src/dot-net/packages/play.demo": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
-              "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
-            },
-            "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj": {
-              "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj"
+            "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
+              "projectPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
             }
           }
         }
@@ -712,7 +708,7 @@
         "dependencies": {
           "Play.Common": {
             "target": "Package",
-            "version": "[1.0.3, )"
+            "version": "[1.0.5, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -737,19 +733,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project '/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
