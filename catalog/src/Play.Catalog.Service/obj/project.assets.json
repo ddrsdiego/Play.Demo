@@ -659,6 +659,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
       "Play.Catalog.Core >= 1.0.0",
       "Play.Common >= 1.0.3",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -692,6 +693,9 @@
           "projectReferences": {
             "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
               "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
+            },
+            "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj": {
+              "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj"
             }
           }
         }
@@ -736,5 +740,16 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project '/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

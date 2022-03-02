@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "ciaffgxViFKZWNkPj6/Gk7mtcrKO0WcTW+oVskDIkspg4PN4Vi9Z+trFw89RZcCIcm21EI1yl0dCuJ/tjEShNQ==",
-  "success": true,
+  "dgSpecHash": "dhMRb+1qMwoN3F92LHb+SqlY6H/gAtgM5X5JgHL/QecSu/lcF7pEiMyPVFpwZumlDSTfYouhp5VQAGGrMeO0AQ==",
+  "success": false,
   "projectFilePath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
   "expectedPackageFiles": [
     "/Users/diego.silva/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
@@ -21,5 +21,15 @@
     "/Users/diego.silva/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/diego.silva/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project '/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service.Core/Play.Catalog.Service.Core.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
