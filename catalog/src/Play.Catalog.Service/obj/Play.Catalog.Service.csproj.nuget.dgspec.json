@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj": {}
+    "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {}
   },
   "projects": {
-    "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
+    "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj",
+        "projectUniqueName": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj",
         "projectName": "Play.Catalog.Core",
-        "projectPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj",
-        "packagesPath": "/home/ddrsdiego/.nuget/packages/",
-        "outputPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/obj/",
+        "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj",
+        "packagesPath": "C:\\Users\\ddrsd\\.nuget\\packages\\",
+        "outputPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ddrsdiego/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ddrsd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "/mnt/c/_dev/src/dot-net/packages/play.demo": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +46,7 @@
             },
             "Play.Common": {
               "target": "Package",
-              "version": "[1.0.5, )"
+              "version": "[1.0.6, )"
             }
           },
           "imports": [
@@ -66,35 +67,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj": {
+    "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+        "projectUniqueName": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
         "projectName": "Play.Catalog.Service",
-        "projectPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
-        "packagesPath": "/home/ddrsdiego/.nuget/packages/",
-        "outputPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/obj/",
+        "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+        "packagesPath": "C:\\Users\\ddrsd\\.nuget\\packages\\",
+        "outputPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ddrsdiego/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ddrsd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/mnt/c/_dev/src/dot-net/packages/play.demo": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
-                "projectPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
+              "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj": {
+                "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj"
               }
             }
           }
@@ -111,7 +113,7 @@
           "dependencies": {
             "Play.Common": {
               "target": "Package",
-              "version": "[1.0.5, )"
+              "version": "[1.0.6, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -136,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

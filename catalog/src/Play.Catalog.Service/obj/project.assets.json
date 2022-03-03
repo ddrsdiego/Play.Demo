@@ -155,10 +155,11 @@
           }
         }
       },
-      "Play.Common/1.0.5": {
+      "Play.Common/1.0.6": {
         "type": "package",
         "dependencies": {
-          "MongoDB.Driver": "2.14.1"
+          "MongoDB.Driver": "2.14.1",
+          "Polly": "7.2.3"
         },
         "compile": {
           "lib/net5.0/Play.Common.dll": {}
@@ -169,6 +170,15 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Polly/7.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {}
+        }
       },
       "SharpCompress/0.30.1": {
         "type": "package",
@@ -253,7 +263,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "Play.Common": "1.0.5"
+          "Play.Common": "1.0.6"
         },
         "compile": {
           "bin/placeholder/Play.Catalog.Core.dll": {}
@@ -480,15 +490,39 @@
         "runtimes/win/native/mongocrypt.dll"
       ]
     },
-    "Play.Common/1.0.5": {
-      "sha512": "AzX/jy3F78lMUfihydIkNkapL9B90L8c8n2HFQTd2oUCOPOlfv4o8MlshBHxJThY8GP1ESaDGHjITdZ3svqfCw==",
+    "Play.Common/1.0.6": {
+      "sha512": "pZIJLvMpth3vuPTO9vo25FyYnqhRpAucXUcqm+pxkGPHY3+192kVpiqDdWz9M0oQNGtQT/OL43LSzPJUZIyWxQ==",
       "type": "package",
-      "path": "play.common/1.0.5",
+      "path": "play.common/1.0.6",
       "files": [
         ".nupkg.metadata",
         "lib/net5.0/Play.Common.dll",
-        "play.common.1.0.5.nupkg.sha512",
+        "play.common.1.0.6.nupkg.sha512",
         "play.common.nuspec"
+      ]
+    },
+    "Polly/7.2.3": {
+      "sha512": "DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ==",
+      "type": "package",
+      "path": "polly/7.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Polly.png",
+        "lib/net461/Polly.dll",
+        "lib/net461/Polly.pdb",
+        "lib/net461/Polly.xml",
+        "lib/net472/Polly.dll",
+        "lib/net472/Polly.pdb",
+        "lib/net472/Polly.xml",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.7.2.3.nupkg.sha512",
+        "polly.nuspec"
       ]
     },
     "SharpCompress/0.30.1": {
@@ -660,38 +694,39 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Play.Catalog.Core >= 1.0.0",
-      "Play.Common >= 1.0.5",
+      "Play.Common >= 1.0.6",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
   "packageFolders": {
-    "/home/ddrsdiego/.nuget/packages/": {}
+    "C:\\Users\\ddrsd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+      "projectUniqueName": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
       "projectName": "Play.Catalog.Service",
-      "projectPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
-      "packagesPath": "/home/ddrsdiego/.nuget/packages/",
-      "outputPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/obj/",
+      "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+      "packagesPath": "C:\\Users\\ddrsd\\.nuget\\packages\\",
+      "outputPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ddrsdiego/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ddrsd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/mnt/c/_dev/src/dot-net/packages/play.demo": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
-              "projectPath": "/mnt/c/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
+            "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj": {
+              "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj"
             }
           }
         }
@@ -708,7 +743,7 @@
         "dependencies": {
           "Play.Common": {
             "target": "Package",
-            "version": "[1.0.5, )"
+            "version": "[1.0.6, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -733,7 +768,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

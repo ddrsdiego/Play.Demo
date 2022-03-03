@@ -2,10 +2,13 @@ namespace Play.Catalog.Core.Application.UseCases.CreateItem
 {
     using System;
     using System.Threading.Tasks;
+    using Common;
     using Common.MongoDB.Settings;
     using Domain.AggregateModels.ItemModel;
+    using Extensions;
+    using Microsoft.AspNetCore.Http;
 
-    public class CreateItemUseCaseImpl : IUseCaseDefinition<CreateItemUseCaseReq, CreateItemUseCaseRsp>
+    public sealed class CreateItemUseCaseImpl : IUseCaseDefinition<CreateItemUseCaseReq>
     {
         private readonly IMongoRepository<Item> _itemRepository;
 
@@ -14,29 +17,23 @@ namespace Play.Catalog.Core.Application.UseCases.CreateItem
             _itemRepository = itemRepository ?? throw new ArgumentNullException(nameof(itemRepository));
         }
 
-        public async Task<CreateItemUseCaseRsp> Execute(CreateItemUseCaseReq req)
+        public async Task<Response> Execute(CreateItemUseCaseReq request)
         {
+            Response response;
+
             try
             {
-                var newItem = new Item
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Name = req.Name,
-                    Description = req.Description,
-                    Price = req.Price,
-                    CreatedAt = DateTimeOffset.Now
-                };
-
+                var newItem = request.ToNewItem();
                 await _itemRepository.Create(newItem);
 
-                return new CreateItemUseCaseRsp(newItem.Id, newItem.Name, newItem.Description, newItem.Price,
-                    newItem.CreatedAt);
+                response = Response.Ok(ResponseContent.Create(newItem.ToResponse()), StatusCodes.Status201Created);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                response = Response.Fail(new Error("", ""), StatusCodes.Status500InternalServerError);
             }
+
+            return response;
         }
     }
 }

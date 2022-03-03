@@ -1,7 +1,5 @@
 namespace Play.Inventory.Core.Application.Responses
 {
-    using System;
-
     public record InventoryItemResponse(
         string UserId,
         string CatalogItemId,

@@ -1,4 +1,5 @@
 #docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
+#docker run -d --rm --name redis -p 6379:6379 -v redisdata:/data/db bitnami/redis:latest
 version: "3.8"
 
 services:

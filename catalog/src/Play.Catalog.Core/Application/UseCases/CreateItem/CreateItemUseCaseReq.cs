@@ -10,7 +10,7 @@ namespace Play.Catalog.Core.Application.UseCases.CreateItem
         {
         }
 
-        public CreateItemUseCaseReq(string requestId, string name, string description, decimal price)
+        private CreateItemUseCaseReq(string requestId, string name, string description, decimal price)
         {
             RequestId = requestId;
             Name = name;

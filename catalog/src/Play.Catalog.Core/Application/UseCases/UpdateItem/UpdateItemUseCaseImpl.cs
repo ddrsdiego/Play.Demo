@@ -1,11 +1,12 @@
 namespace Play.Catalog.Core.Application.UseCases.UpdateItem
 {
     using System.Threading.Tasks;
+    using Common;
     using Domain.AggregateModels.ItemModel;
 
-    public class UpdateItemUseCaseImpl : IUseCaseDefinition<UpdateItemUseCaseReq, UpdateItemUseCaseRsp>
+    public class UpdateItemUseCaseImpl : IUseCaseDefinition<UpdateItemUseCaseReq>
     {
-        public Task<UpdateItemUseCaseRsp> Execute(UpdateItemUseCaseReq request)
+        public Task<Response> Execute(UpdateItemUseCaseReq request)
         {
             throw new System.NotImplementedException();
         }

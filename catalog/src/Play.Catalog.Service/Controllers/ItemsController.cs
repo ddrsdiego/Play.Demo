@@ -13,21 +13,20 @@ namespace Play.Catalog.Service.Controllers
     using Catalog.Core.Domain.AggregateModels.ItemModel;
     using Common.MongoDB.Settings;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.OpenApi.Any;
 
     [ApiController]
     [Route("items")]
     public class ItemsController : ControllerBase
     {
         private readonly IMongoRepository<Item> _itemRepository;
-        private readonly IUseCaseDefinition<CreateItemUseCaseReq, CreateItemUseCaseRsp> _createItemUseCase;
-        private readonly IUseCaseDefinition<UpdateItemUseCaseReq, UpdateItemUseCaseRsp> _updateItemUseCase;
+        private readonly IUseCaseDefinition<CreateItemUseCaseReq> _createItemUseCase;
+        private readonly IUseCaseDefinition<UpdateItemUseCaseReq> _updateItemUseCase;
 
         private static int requestCounter = 0;
 
         public ItemsController(IMongoRepository<Item> itemRepository,
-            IUseCaseDefinition<CreateItemUseCaseReq, CreateItemUseCaseRsp> createItemUseCase,
-            IUseCaseDefinition<UpdateItemUseCaseReq, UpdateItemUseCaseRsp> updateItemUseCase)
+            IUseCaseDefinition<CreateItemUseCaseReq> createItemUseCase,
+            IUseCaseDefinition<UpdateItemUseCaseReq> updateItemUseCase)
         {
             _itemRepository = itemRepository ?? throw new ArgumentNullException(nameof(itemRepository));
             _createItemUseCase = createItemUseCase ?? throw new ArgumentNullException(nameof(createItemUseCase));
@@ -75,7 +74,9 @@ namespace Play.Catalog.Service.Controllers
         public async Task<ActionResult<ItemResponse>> Post([FromBody] CreateItemRequest request)
         {
             var response = await _createItemUseCase.Execute(request.AsUseCaseRequest());
-            return CreatedAtAction(nameof(GetById), new { id = response.Id }, response);
+            var createUseRsp = response.Content.GetRaw<CreateItemUseCaseRsp>();
+            
+            return CreatedAtAction(nameof(GetById), new { id = createUseRsp.Id }, createUseRsp);
         }
     }
 }
