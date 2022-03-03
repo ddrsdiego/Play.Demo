@@ -247,7 +247,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "Play.Common": "1.0.8"
+          "Play.Common": "1.0.9"
         },
         "compile": {
           "bin/placeholder/Play.Catalog.Core.dll": {}
@@ -259,7 +259,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Play.Common/1.0.8": {
+      "Play.Common/1.0.9": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
@@ -680,7 +680,7 @@
       "path": "../Play.Catalog.Core/Play.Catalog.Core.csproj",
       "msbuildProject": "../Play.Catalog.Core/Play.Catalog.Core.csproj"
     },
-    "Play.Common/1.0.8": {
+    "Play.Common/1.0.9": {
       "type": "project",
       "path": "../../../common/src/Play.Common/Play.Common.csproj",
       "msbuildProject": "../../../common/src/Play.Common/Play.Common.csproj"
@@ -689,42 +689,41 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Play.Catalog.Core >= 1.0.0",
-      "Play.Common >= 1.0.8",
+      "Play.Common >= 1.0.9",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ddrsd\\.nuget\\packages\\": {}
+    "/Users/diego.silva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+      "projectUniqueName": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
       "projectName": "Play.Catalog.Service",
-      "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
-      "packagesPath": "C:\\Users\\ddrsd\\.nuget\\packages\\",
-      "outputPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Service\\obj\\",
+      "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+      "packagesPath": "/Users/diego.silva/.nuget/packages/",
+      "outputPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ddrsd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/diego.silva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/Users/diego.silva/src/projects/packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj": {
-              "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj"
+            "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj": {
+              "projectPath": "/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Core/Play.Catalog.Core.csproj"
             },
-            "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj": {
-              "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj"
+            "/Users/diego.silva/src/projects/Play.Demo/common/src/Play.Common/Play.Common.csproj": {
+              "projectPath": "/Users/diego.silva/src/projects/Play.Demo/common/src/Play.Common/Play.Common.csproj"
             }
           }
         }
@@ -741,7 +740,7 @@
         "dependencies": {
           "Play.Common": {
             "target": "Package",
-            "version": "[1.0.8, )"
+            "version": "[1.0.9, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -766,7 +765,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -4,7 +4,7 @@
         <TargetFramework>net5.0</TargetFramework>
         <Nullable>enable</Nullable>
         <PackageId>Play.Common</PackageId>
-        <Version>1.0.8</Version>
+        <Version>1.0.9</Version>
         <Company>Play.Demo</Company>
     </PropertyGroup>
     <ItemGroup>

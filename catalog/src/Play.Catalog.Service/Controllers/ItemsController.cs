@@ -13,6 +13,7 @@ namespace Play.Catalog.Service.Controllers
     using Catalog.Core.Domain.AggregateModels.ItemModel;
     using Common.MongoDB.Settings;
     using Common.UseCases;
+    using Core.Application.Requests;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
@@ -49,6 +50,8 @@ namespace Play.Catalog.Service.Controllers
             if (requestCounter % 5 == 0)
             {
                 Console.WriteLine($"Request {requestCounter}: 500 (Internal Server Error).");
+
+                await Task.Delay(TimeSpan.FromSeconds(5));
                 return StatusCode(500);
             }
 
@@ -75,14 +78,19 @@ namespace Play.Catalog.Service.Controllers
         public async Task<ActionResult<ItemResponse>> Post([FromBody] CreateItemRequest request)
         {
             var response = await _createItemUseCase.Execute(request.AsUseCaseRequest());
+            if (response.IsFailure) return BadRequest();
+
             var createUseRsp = response.Content.GetRaw<CreateItemUseCaseRsp>();
-            
             return CreatedAtAction(nameof(GetById), new { id = createUseRsp.Id }, createUseRsp);
         }
 
-        public async Task<ActionResult> Put([FromBody] UpdateItemUseCaseReq request)
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<ActionResult> Put(string id, [FromBody] UpdateItemRequest request)
         {
-            var response = await _updateItemUseCase.Execute(request);
+            var req = request.AsUseCaseRequest(id);
+            var response = await _updateItemUseCase.Execute(req);
+
             return Ok();
         }
     }

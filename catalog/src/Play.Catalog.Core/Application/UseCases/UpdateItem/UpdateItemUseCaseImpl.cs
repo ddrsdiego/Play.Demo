@@ -26,6 +26,7 @@ namespace Play.Catalog.Core.Application.UseCases.UpdateItem
                 var item = await _repository.Get(x => x.Id == request.Id).FastResult();
                 if (item is null)
                 {
+                    return Response.Fail(new Error("", ""));
                 }
             }
             catch (Exception e)

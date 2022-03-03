@@ -8,13 +8,19 @@
 
     public static class Extension
     {
-        public static IServiceCollection AddUseCases(this IServiceCollection services)
+        public static IServiceCollection AddUseCases(this IServiceCollection services, params Assembly[] assemblies)
         {
-            var exportedTypes = TryGetExportedTypes();
+            if (!assemblies.Any())
+                throw new ArgumentException(
+                    "No assemblies found to scan. Supply at least one assembly to scan for handlers.");
+
+            assemblies = (assemblies as Assembly[] ?? assemblies).Distinct().ToArray();
+
+            var exportedTypes = TryGetExportedTypes(assemblies);
             foreach (var exported in exportedTypes)
             {
                 var interfaceType = GetInterfaceType(exported);
-                if (interfaceType == null) continue;
+                if (interfaceType == null || exported.IsAbstract) continue;
 
                 services.AddScoped(interfaceType, exported);
             }
@@ -40,18 +46,24 @@
             }
         }
 
-        private static IEnumerable<Type> TryGetExportedTypes()
+        private static IEnumerable<Type> TryGetExportedTypes(IEnumerable<Assembly> assemblies)
         {
+            var exportedTypes = new List<Type>();
+
+            foreach (var assembly in assemblies)
+            {
+                exportedTypes.AddRange(assembly.ExportedTypes);
+            }
+
             var entryAssemblyExportedTypes = Assembly.GetEntryAssembly()?.ExportedTypes.ToList();
             var executingAssemblyExportedTypes = Assembly.GetExecutingAssembly().ExportedTypes.ToList();
 
-            var exportedTypes = new List<Type>();
             if (entryAssemblyExportedTypes is { Count: > 0 })
                 exportedTypes.AddRange(entryAssemblyExportedTypes);
 
             if (executingAssemblyExportedTypes is { Count: > 0 })
                 exportedTypes.AddRange(executingAssemblyExportedTypes);
-            
+
             return exportedTypes;
         }
     }

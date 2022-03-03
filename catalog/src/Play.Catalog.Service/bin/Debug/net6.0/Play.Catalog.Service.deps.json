@@ -9,7 +9,7 @@
       "Play.Catalog.Service/1.0.0": {
         "dependencies": {
           "Play.Catalog.Core": "1.0.0",
-          "Play.Common": "1.0.8",
+          "Play.Common": "1.0.9",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -108,12 +108,12 @@
           "runtimes/win/native/snappy32.dll": {
             "rid": "win",
             "assetType": "native",
-            "fileVersion": "1.1.1.7"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win/native/snappy64.dll": {
             "rid": "win",
             "assetType": "native",
-            "fileVersion": "1.1.1.7"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -201,13 +201,13 @@
       "Play.Catalog.Core/1.0.0": {
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "Play.Common": "1.0.8"
+          "Play.Common": "1.0.9"
         },
         "runtime": {
           "Play.Catalog.Core.dll": {}
         }
       },
-      "Play.Common/1.0.8": {
+      "Play.Common/1.0.9": {
         "dependencies": {
           "MongoDB.Driver": "2.14.1",
           "Polly": "7.2.3"
@@ -341,7 +341,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Play.Common/1.0.8": {
+    "Play.Common/1.0.9": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
