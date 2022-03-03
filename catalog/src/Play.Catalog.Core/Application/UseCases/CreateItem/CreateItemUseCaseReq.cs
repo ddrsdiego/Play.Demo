@@ -1,6 +1,7 @@
 namespace Play.Catalog.Core.Application.UseCases.CreateItem
 {
     using System;
+    using Common.UseCases;
     using Domain.AggregateModels.ItemModel;
 
     public class CreateItemUseCaseReq : IUseCaseRequest

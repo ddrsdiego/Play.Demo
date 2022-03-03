@@ -6,7 +6,7 @@ namespace Play.Catalog.Core.Infra.Extensions
     using Microsoft.Extensions.DependencyInjection;
     using Options;
 
-    internal static class RepositoriesContainer
+    public static class RepositoriesContainer
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services, IConfiguration configuration)
         {

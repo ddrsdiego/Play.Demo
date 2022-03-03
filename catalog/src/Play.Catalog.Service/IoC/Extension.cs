@@ -1,7 +1,8 @@
-namespace Play.Catalog.Core.Application.IoC.Extensions
+﻿namespace Play.Catalog.Service.IoC
 {
-    using Infra.Extensions;
-    using Infra.Options;
+    using Catalog.Core.Infra.Extensions;
+    using Catalog.Core.Infra.Options;
+    using Common.UseCases.Extensions;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 

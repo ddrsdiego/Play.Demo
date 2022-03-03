@@ -12,6 +12,7 @@ namespace Play.Catalog.Service.Controllers
     using Catalog.Core.Application.UseCases.UpdateItem;
     using Catalog.Core.Domain.AggregateModels.ItemModel;
     using Common.MongoDB.Settings;
+    using Common.UseCases;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
@@ -77,6 +78,12 @@ namespace Play.Catalog.Service.Controllers
             var createUseRsp = response.Content.GetRaw<CreateItemUseCaseRsp>();
             
             return CreatedAtAction(nameof(GetById), new { id = createUseRsp.Id }, createUseRsp);
+        }
+
+        public async Task<ActionResult> Put([FromBody] UpdateItemUseCaseReq request)
+        {
+            var response = await _updateItemUseCase.Execute(request);
+            return Ok();
         }
     }
 }

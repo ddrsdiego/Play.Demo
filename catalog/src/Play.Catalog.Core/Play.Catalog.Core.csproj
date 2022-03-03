@@ -9,10 +9,13 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="FluentValidation" Version="10.3.6" />
-      <PackageReference Include="Play.Common" Version="1.0.6" />
+      <PackageReference Include="Play.Common" Version="1.0.8" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Application\UseCases\UpdateItem\Extensions" />
       <Folder Include="Domain\Extensions" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\common\src\Play.Common\Play.Common.csproj" />
     </ItemGroup>
 </Project>

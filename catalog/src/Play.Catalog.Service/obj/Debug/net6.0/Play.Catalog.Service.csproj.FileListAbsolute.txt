@@ -140,3 +140,4 @@ C:\_dev\src\dot-net\Play.Demo\catalog\src\Play.Catalog.Service\obj\Debug\net6.0\
 C:\_dev\src\dot-net\Play.Demo\catalog\src\Play.Catalog.Service\obj\Debug\net6.0\scopedcss\bundle\Play.Catalog.Service.styles.css
 C:\_dev\src\dot-net\Play.Demo\catalog\src\Play.Catalog.Service\obj\Debug\net6.0\Play.Catalog.Service.csproj.CopyComplete
 C:\_dev\src\dot-net\Play.Demo\catalog\src\Play.Catalog.Service\obj\Debug\net6.0\Play.Catalog.Service.genruntimeconfig.cache
+C:\_dev\src\dot-net\Play.Demo\catalog\src\Play.Catalog.Service\bin\Debug\net6.0\Play.Common.pdb

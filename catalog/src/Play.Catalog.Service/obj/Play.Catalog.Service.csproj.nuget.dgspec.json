@@ -27,7 +27,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj": {
+                "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -46,7 +50,7 @@
             },
             "Play.Common": {
               "target": "Package",
-              "version": "[1.0.6, )"
+              "version": "[1.0.8, )"
             }
           },
           "imports": [
@@ -97,6 +101,9 @@
             "projectReferences": {
               "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj": {
                 "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\catalog\\src\\Play.Catalog.Core\\Play.Catalog.Core.csproj"
+              },
+              "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj": {
+                "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj"
               }
             }
           }
@@ -113,11 +120,78 @@
           "dependencies": {
             "Play.Common": {
               "target": "Package",
-              "version": "[1.0.6, )"
+              "version": "[1.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj": {
+      "version": "1.0.8",
+      "restore": {
+        "projectUniqueName": "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj",
+        "projectName": "Play.Common",
+        "projectPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\Play.Common.csproj",
+        "packagesPath": "C:\\Users\\ddrsd\\.nuget\\packages\\",
+        "outputPath": "C:\\_dev\\src\\dot-net\\Play.Demo\\common\\src\\Play.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ddrsd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.3, )"
             }
           },
           "imports": [
