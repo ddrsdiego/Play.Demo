@@ -143,3 +143,5 @@ C:/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/obj/Debug/net6.0/
 C:/_dev/src/dot-net/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Play.Common.pdb
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Polly.dll
 /Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Play.Common.pdb
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Microsoft.Extensions.Http.Polly.dll
+/Users/diego.silva/src/projects/Play.Demo/catalog/src/Play.Catalog.Service/bin/Debug/net6.0/Polly.Extensions.Http.dll

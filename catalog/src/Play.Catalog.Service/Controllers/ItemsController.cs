@@ -5,12 +5,11 @@ namespace Play.Catalog.Service.Controllers
     using System.Linq;
     using System.Threading.Tasks;
     using Catalog.Core.Application.Requests;
-    using Catalog.Core.Application.Requests.Extensions;
     using Catalog.Core.Application.Responses;
-    using Catalog.Core.Application.Responses.Extensions;
     using Catalog.Core.Application.UseCases.CreateItem;
     using Catalog.Core.Application.UseCases.UpdateItem;
     using Catalog.Core.Domain.AggregateModels.ItemModel;
+    using Common;
     using Common.MongoDB.Settings;
     using Common.UseCases;
     using Core.Application.Requests;
@@ -86,12 +85,12 @@ namespace Play.Catalog.Service.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public async Task<ActionResult> Put(string id, [FromBody] UpdateItemRequest request)
+        public async Task<ActionResult<Response>> Put(string id, [FromBody] UpdateItemRequest request)
         {
-            var req = request.AsUseCaseRequest(id);
-            var response = await _updateItemUseCase.Execute(req);
+            var response = await _updateItemUseCase.Execute(request.AsUseCaseRequest(id));
+            if (response.IsFailure) return BadRequest(response.ErrorResponse);
 
-            return Ok();
+            return Ok(response.Content);
         }
     }
 }

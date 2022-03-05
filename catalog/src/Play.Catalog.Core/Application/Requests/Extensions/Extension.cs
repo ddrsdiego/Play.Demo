@@ -1,4 +1,4 @@
-namespace Play.Catalog.Core.Application.Requests.Extensions
+namespace Play.Catalog.Core.Application.Requests
 {
     using System;
     using Service.Core.Application.Requests;

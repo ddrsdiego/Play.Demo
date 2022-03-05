@@ -1,36 +1,44 @@
 namespace Play.Common.Http
 {
     using System;
-    using System.Collections.Generic;
+    using System.Collections.Immutable;
+    using System.Net.Http;
     using System.Net.Mime;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Net.Http.Headers;
+    using Polly;
     using Settings;
 
-    internal class RequestHeadersMap
+    public interface IHttpClientsSettingContext
     {
-        private const string Json = "json";
-        private const string Soap = "soap+xml";
+        void AddSetting(string serviceName, ClientSetting clientSetting);
 
-        public RequestHeadersMap(string requestHeaderSetting, string requestHeaderClient)
+        bool TryGetSetting(string serviceName, out ClientSetting clientSetting);
+    }
+
+    internal sealed class HttpClientsSettingContext : IHttpClientsSettingContext
+    {
+        private ImmutableDictionary<string, ClientSetting> _clients;
+
+        public HttpClientsSettingContext()
         {
-            RequestHeaderSetting = requestHeaderSetting;
-            RequestHeaderClient = requestHeaderClient;
+            _clients = ImmutableDictionary<string, ClientSetting>.Empty;
         }
 
-        public readonly string RequestHeaderClient;
-        public readonly string RequestHeaderSetting;
-
-        private static readonly RequestHeadersMap SoapXml = new(Soap, MediaTypeNames.Application.Soap);
-        private static readonly RequestHeadersMap JsonHeader = new(Json, MediaTypeNames.Application.Json);
-
-        private static IEnumerable<RequestHeadersMap?> GetAll()
+        public void AddSetting(string serviceName, ClientSetting clientSetting)
         {
-            return new[]
-            {
-                JsonHeader
-            };
+            if (serviceName == null) throw new ArgumentNullException(nameof(serviceName));
+            if (clientSetting == null) throw new ArgumentNullException(nameof(clientSetting));
+
+
+            if (!_clients.TryGetValue(serviceName, out var _))
+                _clients = _clients.Add(serviceName, clientSetting);
+        }
+
+        public bool TryGetSetting(string serviceName, out ClientSetting clientsSettings)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -43,14 +51,16 @@ namespace Play.Common.Http
 
             foreach (var clientSetting in httpClientsSettings.Clients)
             {
-                if (clientSetting.IsValidSetting)
+                if (clientSetting.IsInvalidSetting)
                     continue;
 
                 services.AddHttpClient(clientSetting.ServiceName, client =>
-                {
-                    client.BaseAddress = new Uri(clientSetting.BaseAddress);
-                    client.DefaultRequestHeaders.Add(HeaderNames.Accept, MediaTypeNames.Application.Json);
-                }).SetHandlerLifetime(TimeSpan.FromMinutes(clientSetting.HandlerLifetimeInMinutes));
+                    {
+                        client.BaseAddress = new Uri(clientSetting.BaseAddress);
+                        client.DefaultRequestHeaders.Add(HeaderNames.Accept, MediaTypeNames.Application.Json);
+                    })
+                    .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(clientSetting.TimeoutInSeconds))
+                    .SetHandlerLifetime(TimeSpan.FromMinutes(clientSetting.HandlerLifetimeInMinutes));
             }
 
             return services;

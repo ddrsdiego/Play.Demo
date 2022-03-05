@@ -15,7 +15,9 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="FluentValidation" Version="10.3.6" />
-      <PackageReference Include="Play.Common" Version="1.0.6" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\common\src\Play.Common\Play.Common.csproj" />
     </ItemGroup>
 
 </Project>

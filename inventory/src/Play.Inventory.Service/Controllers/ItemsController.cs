@@ -4,6 +4,7 @@ namespace Play.Inventory.Service.Controllers
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using Common.Http;
     using Common.MongoDB.Settings;
     using Core.Application.Requests;
     using Core.Application.Responses;
@@ -16,12 +17,16 @@ namespace Play.Inventory.Service.Controllers
     public class ItemsController : ControllerBase
     {
         private readonly ICatalogClient _catalogClient;
+        private readonly IHttpClientRequesterFactory _httpClientRequesterFactory;
         private readonly IMongoRepository<InventoryItem> _repository;
 
-        public ItemsController(IMongoRepository<InventoryItem> repository, ICatalogClient catalogClient)
+        public ItemsController(IMongoRepository<InventoryItem> repository,
+            ICatalogClient catalogClient,
+            IHttpClientRequesterFactory httpClientRequesterFactory)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _catalogClient = catalogClient ?? throw new ArgumentNullException(nameof(catalogClient));
+            _httpClientRequesterFactory = httpClientRequesterFactory;
         }
 
         [HttpGet]
@@ -45,6 +50,12 @@ namespace Play.Inventory.Service.Controllers
             if (string.IsNullOrWhiteSpace(userId))
                 return BadRequest();
 
+            var requester = _httpClientRequesterFactory
+                .WithServiceName("CatalogClient")
+                .WithRoutParameter("id", "e5afa751-0298-43f6-8db7-da279610a03c")
+                .CreateGetRequest<string>();
+
+           
             var catalogItems = await _catalogClient.GetCatalogItems();
             var inventoryItems = await _repository.GetAll(x => x.UserId == userId);
 

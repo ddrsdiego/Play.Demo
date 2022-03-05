@@ -1,4 +1,4 @@
-namespace Play.Catalog.Core.Application.Responses.Extensions
+namespace Play.Catalog.Core.Application.Responses
 {
     using Domain.AggregateModels.ItemModel;
 
