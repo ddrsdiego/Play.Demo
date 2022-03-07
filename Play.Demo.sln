@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "container", "container", "{635E151A-DC5A-4952-8F27-C974631DBD11}"
 ProjectSection(SolutionItems) = preProject
 	container\docker-compose.yml = container\docker-compose.yml
+	container\dockerfile = container\dockerfile
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inventory", "inventory", "{674E02A0-3836-4379-932A-6315C7502FC9}"
